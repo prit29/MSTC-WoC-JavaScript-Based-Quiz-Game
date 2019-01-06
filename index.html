@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Base Quiz Game</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script type="text/javascript" src="main.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	<div class="heading">
+		Quiz Game 
+	</div>
+	<div class="watch" style="display: none" id="timerr">
+		TIMER 10:00
+	</div>
+	<div id="pg1">
+	<div class="notice" align="center">
+		<h4>
+		<marquee>
+			Notice: For Starting Quiz.. Fill This Form & Read Rules Below Form..
+		</marquee>
+		</h4>
+	</div>
+	<div class="formm" align="center">
+		<h1 style="color: #800080">FORM</h1>
+	<form>
+		Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="check1" type="text" name="name" placeholder="Enter Name">
+		<label id="check4" style="color: red; visibility: hidden;font-size: 13px">*invalid</label>
+		<br><br>
+		E-mail:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="check3" type="text" name="email" placeholder="Enter Email">
+		<label id="check5" style="color: red; visibility: hidden;font-size: 13px">*invalid</label>
+		<br><br>
+		Mobile-No:&nbsp<input id="check2" type="text" name="monum" placeholder="Enter Mobile-No">
+		<label id="check6" style="color: red; visibility: hidden;font-size: 13px">*invalid</label>
+		<br><br>
+		<button type="button" class="B" style="color: #800080; font-size: 25px;" onclick="change()">
+				START
+		</button>
+	</form>
+	</div>
+	<div class="rules">
+		<h4 style="font-size: 25px;font-weight: bold">&nbsp&nbsp&nbspRULES:</h4>
+		<p>&nbsp&nbsp1. This quiz's are from different topics & All topics are mandatory.</p>
+		<p>&nbsp&nbsp2. Evalution are based on true answer & timing and you will get rank.</p>
+		<p>&nbsp&nbsp3. Topics: 1.Maths, 2.Science, 3.History, 4.Geography, 5.Literatute</p>
+		<p>&nbsp&nbsp4. All topics are continuous and you don't skip any question.</p>
+		<p>&nbsp&nbsp5. You press 'NEXT' points of that question will be evaluted.</p>
+		<p>&nbsp&nbsp6. You press 'PREVIOUS' points of that question will be canceled.</p>
+	</div>
+</div>
+<div id="pg2" style="display: none;">
+	<h1 style="color: #800000; font-size: 50px;" align="center" id="head">MATHS</h1>
+	<div class="optionmaths" align="center" >
+		<a href="1maths.html" class="A" id="1" style="background-color: #800080;color: #E6E6FA; font-weight: bold;border-radius: 20px 20px 0px 0px;visibility: hidden;">&nbsp1</a>
+		<a href="2maths.html" class="A" id="2" style="background-color: #800080;color: #E6E6FA; font-weight: bold;border-radius: 20px 20px 0px 0px;visibility: hidden;">&nbsp2</a>
+		<a href="3maths.html" class="A" id="3" style="background-color: #800080;color: #E6E6FA; font-weight: bold;border-radius: 20px 20px 0px 0px;visibility: hidden;">&nbsp3</a>
+		<a href="4maths.html" class="A" id="4" style="background-color: #800080;color: #E6E6FA; font-weight: bold;border-radius: 20px 20px 0px 0px;visibility: hidden;">&nbsp4</a>
+		<a href="5maths.html" class="A" id="5" style="background-color: #800080;color: #E6E6FA; font-weight: bold;border-radius: 20px 20px 0px 0px;visibility: hidden;">&nbsp5</a>
+	</div>
+
+	<!--<hr color="#800080">-->
+	<div class="que"  style="visibility: hidden;">
+		<p align="center" id="que">What does D represent in Roman numeral system?</p>
+	</div>
+	<div id="you" class="que" style="visibility: hidden">
+		<form>
+					
+						<input type="radio" name="option" value="1" id="opt1" class="checkmark"><label id="op1" for="opt1" class="nn">
+						  100</label></input><br>
+						  <input type="radio" name="option" value="2" id="opt2" class="checkmark"><label id="op2" for="opt2" class="nn">&nbsp500</label></input><br>
+						  <input type="radio" name="option" value="3" id="opt3" class="checkmark"><label id="op3" for="opt3" class="nn">&nbsp1000</label></input><br>
+						  <input type="radio" name="option" value="4" id="opt4" class="checkmark"><label id="op4" for="opt4" class="nn">&nbsp50</label></input><br>
+						
+		</form>
+	</div>
+	<br>
+	<div class="preback" align="center">
+		<button type="button" style="background-color: #E6E6FA;color: #800080;font-size: 30px;visibility: hidden;width: 200px" id="prev" class="B" onclick="prevpg()"><< Previous</button>
+
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+		<button type="button" style="background-color: #E6E6FA;color: #800080;font-size: 30px;visibility: hidden;width: 200px" id="next" class="B" onclick="nextpg()">Next >></button><br><br>
+	</div>
+	<div align="center" class="result">
+		<p style="font-size: 20px;color: #800000">Submit for Result</p>
+		<form>
+			<button type="button" class="B" style="color: #800080; font-size: 25px;" onclick="mymarks()">SUBMIT</button>
+		</form>
+	</div>
+	<br>
+</div>
+	<br>
+<div id="pg3" style="display: none;">
+	<h1 style="color: #800000; font-size: 50px;" align="center">Result</h1>
+	<table align="center" style="font-family: arial; ">
+		<tr>
+			<th style="width: 10%;color: #2F4F4F;">NO.</th>
+			<th style="width: 30%;color: #2F4F4F;">NAME</th>
+			<th style="width: 30%;color: #2F4F4F;">MOBILE</th>
+			<th style="width: 15%;color: #2F4F4F;">TIME</th>
+			<th style="width: 15%;color: #2F4F4F;">SCORE</th>
+		</tr>
+		<tr>
+			<td style="width: 10%;">1</td>
+			<td style="width: 30%;" id="names1">Name</td>
+			<td style="width: 30%;" id="call1">Mobile_no</td>
+			<td style="width: 15%;" id="timer1">00:00</td>
+			<td style="width: 15%;" id="marks1">25</td>
+		</tr>
+		<tr>
+			<td style="width: 10%;">2</td>
+			<td style="width: 30%;" id="names2">Name</td>
+			<td style="width: 30%;" id="call2">Mobile_no</td>
+			<td style="width: 15%;" id="timer2">00:00</td>
+			<td style="width: 15%;" id="marks2">25</td>
+		</tr>
+		<tr>
+			<td style="width: 10%;">3</td>
+			<td style="width: 30%;" id="names3">Name</td>
+			<td style="width: 30%;" id="call3">Mobile_no</td>
+			<td style="width: 15%;" id="timer3">00:00</td>
+			<td style="width: 15%;" id="marks3">25</td>
+		</tr>
+		<tr>
+			<td style="width: 10%;">4</td>
+			<td style="width: 30%;" id="names4">Name</td>
+			<td style="width: 30%;" id="call4">Mobile_no</td>
+			<td style="width: 15%;" id="timer4">00:00</td>
+			<td style="width: 15%;" id="marks4">25</td>
+		</tr>
+		<tr>
+			<td style="width: 10%;">5</td>
+			<td style="width: 30%;" id="names5">Name</td>
+			<td style="width: 30%;" id="call5">Mobile_no</td>
+			<td style="width: 15%;" id="timer5">00:00</td>
+			<td style="width: 15%;" id="marks5">25</td>
+		</tr>
+	</table>
+	<br><br>
+	<div align="center">
+	<form action="index.html">
+		<button name="submit" value="submit" class="B" style="color: #800080; font-size: 25px;">REPLAY</button>
+	</form>
+	</div>
+	<br>
+</div>
+	<footer style="font-family:Comic Sans MS;color: #330033;text-align: right;padding-right: 50px;background-color: #DDA0DD;visibility: hidden;" id="pg4">
+		Design By PRIT
+	</footer>
+</body>
+</html>
