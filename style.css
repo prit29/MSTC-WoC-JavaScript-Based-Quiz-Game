@@ -1,12 +1,12 @@
 body{
-	background-color: #E6E6FA;
+	background-color: #E6E6FB;
 }
 .heading{
 	background-color: #800080;
 	color:white;
 	padding: 8px;
 	padding-left: 20px;
-	font-size: 36px;
+	font-size: 37px;
 	font-family: arial;
 	font-weight: bold;
 	letter-spacing: .2px;
@@ -14,6 +14,19 @@ body{
 }
 .notice{
 	color: red;
+}
+.extarclass{
+	height: 50vh;
+    width: 50vw;
+    background-color: rgb(148, 205, 224); 
+    min-width: 300px;
+    min-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(223, 97, 160);
+    text-align: center;
+    
+    margin-bottom: 100px;
 }
 .watch{
 	margin-top: 0px;
@@ -87,7 +100,7 @@ table,th,td{
 td,th{
 	padding-left: 5px;
 }
-.checkmark {
+.checkmarks {
   top: 0;
   left: 0;
   height: 25px;
@@ -97,6 +110,24 @@ td,th{
 .nn:hover{
 	font-weight: bold;
 	padding-left: 10px;
+}
+@keyframes item{
+    0%{
+        transform:  translateX(0px);
+    }
+    25%{
+        transform: translateX(0px);
+    }
+    
+    50%{
+        transform:  translateX(-50px);
+    }
+    75%{
+        transform: translateX(-50px);
+    }100%{
+        transform:  translateX(0px);
+    }
+
 }
 /* The container 
 .container {
