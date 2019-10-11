@@ -807,3 +807,13 @@ function mymarks()
 	document.getElementById("marks5").innerHTML=leader[4].sco;
 	stop();
 }
+function starty()
+{
+	IID=window.setInterval(timing,1000);
+}
+function stopy()
+{
+	sec=0;
+	min=0;
+	window.clearInterval(IID);
+}
